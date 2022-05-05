@@ -1,0 +1,1 @@
+Logging to ./log_gem/mujoco/gem+tbp/swimmer_gem+tbp_3
