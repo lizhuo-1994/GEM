@@ -1,297 +1,149 @@
 Logging to ./log_gem/mujoco/rcs_1/swimmer_rcs_0
 seed=0, logdir=./log_gem/mujoco/rcs_1/swimmer_rcs_0
----------------------------------------
-| eval mean 100 episod... | 21.7      |
-| eval_abs_qs_difference  | 1.8851047 |
-| eval_discount_q         | 14.9      |
-| eval_ep_rewmean         | 21.9      |
-| eval_eplenmean          | 1e+03     |
-| eval_qs                 | -1.163869 |
-| eval_qs_difference      | -1.89     |
-| eval_time_elapsed       | 8         |
-| total timesteps         | 1         |
----------------------------------------
+----------------------------------------
+| eval mean 100 episod... | 24.3       |
+| eval_abs_qs_difference  | 2.4517791  |
+| eval_discount_q         | 7.83       |
+| eval_ep_rewmean         | 24         |
+| eval_eplenmean          | 1e+03      |
+| eval_qs                 | -0.5595046 |
+| eval_qs_difference      | -2.19      |
+| eval_time_elapsed       | 30         |
+| total timesteps         | 1          |
+----------------------------------------
 ----------------------------------------
 | act_time                | 0          |
 | current_lr              | 0.0003     |
-| discount_q              | 2.29e-13   |
-| env_time                | 2          |
-| ep_rewmean              | -2.05      |
+| discount_q              | -5.14e-14  |
+| env_time                | 6          |
+| ep_rewmean              | 3.4        |
 | episodes                | 4          |
 | eplenmean               | 1e+03      |
-| fps                     | 280        |
-| mean 100 episode reward | -2.1       |
+| fps                     | 90         |
+| mean 100 episode reward | 3.4        |
 | n_updates               | 0          |
-| qs_abs_difference       | 3.34       |
-| qs_difference           | 1.06       |
-| qs_mean                 | 0.14084241 |
-| time_elapsed            | 14         |
+| qs_abs_difference       | 3.21       |
+| qs_difference           | 1.33       |
+| qs_mean                 | 0.62404174 |
+| time_elapsed            | 43         |
 | total timesteps         | 4000       |
 | train_time              | 0          |
-| update_time             | 2          |
+| update_time             | 3          |
 ----------------------------------------
+---------------------------------------
+| act_time                | 1         |
+| current_lr              | 0.0003    |
+| discount_q              | -1.32e-13 |
+| env_time                | 12        |
+| ep_rewmean              | -1.59     |
+| episodes                | 8         |
+| eplenmean               | 1e+03     |
+| fps                     | 128       |
+| mean 100 episode reward | -1.6      |
+| n_updates               | 0         |
+| qs_abs_difference       | 4.18      |
+| qs_difference           | 0.842     |
+| qs_mean                 | 0.570135  |
+| time_elapsed            | 62        |
+| total timesteps         | 8000      |
+| train_time              | 0         |
+| update_time             | 13        |
+---------------------------------------
 ----------------------------------------
-| act_time                | 0          |
-| current_lr              | 0.0003     |
-| discount_q              | -3.28e-14  |
-| env_time                | 4          |
-| ep_rewmean              | -1.42      |
-| episodes                | 8          |
-| eplenmean               | 1e+03      |
-| fps                     | 326        |
-| mean 100 episode reward | -1.4       |
-| n_updates               | 0          |
-| qs_abs_difference       | 3.43       |
-| qs_difference           | -1.19      |
-| qs_mean                 | 0.21355958 |
-| time_elapsed            | 24         |
-| total timesteps         | 8000       |
-| train_time              | 0          |
-| update_time             | 9          |
-----------------------------------------
-----------------------------------------
-| eval mean 100 episod... | 20.7       |
-| eval_abs_qs_difference  | 1.7707554  |
-| eval_discount_q         | 14.5       |
-| eval_ep_rewmean         | 20.1       |
+| eval mean 100 episod... | 24.6       |
+| eval_abs_qs_difference  | 2.2971044  |
+| eval_discount_q         | 10         |
+| eval_ep_rewmean         | 25.3       |
 | eval_eplenmean          | 1e+03      |
-| eval_qs                 | -1.1661136 |
-| eval_qs_difference      | -1.74      |
-| eval_time_elapsed       | 8          |
+| eval_qs                 | -0.5606357 |
+| eval_qs_difference      | -2.1       |
+| eval_time_elapsed       | 31         |
 | total timesteps         | 10001      |
 ----------------------------------------
-----------------------------------------
-| act_time                | 0          |
-| current_lr              | 0.0003     |
-| discount_q              | -7.19e-14  |
-| env_time                | 6          |
-| ep_rewmean              | -1.84      |
-| episodes                | 12         |
-| eplenmean               | 1e+03      |
-| fps                     | 252        |
-| mean 100 episode reward | -1.8       |
-| n_updates               | 0          |
-| qs_abs_difference       | 4.8        |
-| qs_difference           | 0.218      |
-| qs_mean                 | 0.16605136 |
-| time_elapsed            | 47         |
-| total timesteps         | 12000      |
-| train_time              | 0          |
-| update_time             | 21         |
-----------------------------------------
 ---------------------------------------
-| act_time                | 0         |
+| act_time                | 1         |
 | current_lr              | 0.0003    |
-| discount_q              | -2.69e-13 |
-| env_time                | 8         |
-| ep_rewmean              | -1.67     |
+| discount_q              | 2.88e-13  |
+| env_time                | 19        |
+| ep_rewmean              | -0.121    |
+| episodes                | 12        |
+| eplenmean               | 1e+03     |
+| fps                     | 101       |
+| mean 100 episode reward | -0.1      |
+| n_updates               | 0         |
+| qs_abs_difference       | 3.41      |
+| qs_difference           | 0.558     |
+| qs_mean                 | 0.6061605 |
+| time_elapsed            | 117       |
+| total timesteps         | 12000     |
+| train_time              | 0         |
+| update_time             | 30        |
+---------------------------------------
+---------------------------------------
+| act_time                | 2         |
+| current_lr              | 0.0003    |
+| discount_q              | -3.11e-13 |
+| env_time                | 25        |
+| ep_rewmean              | 3.35      |
 | episodes                | 16        |
 | eplenmean               | 1e+03     |
-| fps                     | 236       |
-| mean 100 episode reward | -1.7      |
+| fps                     | 107       |
+| mean 100 episode reward | 3.3       |
 | n_updates               | 0         |
-| qs_abs_difference       | 4.82      |
-| qs_difference           | -2.23     |
-| qs_mean                 | 0.1809915 |
-| time_elapsed            | 67        |
+| qs_abs_difference       | 5.88      |
+| qs_difference           | -3.14     |
+| qs_mean                 | 0.6008581 |
+| time_elapsed            | 148       |
 | total timesteps         | 16000     |
 | train_time              | 0         |
-| update_time             | 38        |
+| update_time             | 53        |
+---------------------------------------
+---------------------------------------
+| act_time                | 3         |
+| current_lr              | 0.0003    |
+| discount_q              | 4.57e-15  |
+| env_time                | 31        |
+| ep_rewmean              | 1.34      |
+| episodes                | 20        |
+| eplenmean               | 1e+03     |
+| fps                     | 107       |
+| mean 100 episode reward | 1.3       |
+| n_updates               | 0         |
+| qs_abs_difference       | 4.58      |
+| qs_difference           | 2.51      |
+| qs_mean                 | 0.5314182 |
+| time_elapsed            | 186       |
+| total timesteps         | 20000     |
+| train_time              | 0         |
+| update_time             | 82        |
 ---------------------------------------
 -----------------------------------------
-| act_time                | 0           |
-| current_lr              | 0.0003      |
-| discount_q              | -2.5e-14    |
-| env_time                | 11          |
-| ep_rewmean              | -0.968      |
-| episodes                | 20          |
-| eplenmean               | 1e+03       |
-| fps                     | 215         |
-| mean 100 episode reward | -1          |
-| n_updates               | 0           |
-| qs_abs_difference       | 2.87        |
-| qs_difference           | -0.238      |
-| qs_mean                 | 0.115222245 |
-| time_elapsed            | 92          |
-| total timesteps         | 20000       |
-| train_time              | 0           |
-| update_time             | 60          |
------------------------------------------
-----------------------------------------
-| eval mean 100 episod... | 21.6       |
-| eval_abs_qs_difference  | 1.8443035  |
-| eval_discount_q         | 14.8       |
-| eval_ep_rewmean         | 20.9       |
-| eval_eplenmean          | 1e+03      |
-| eval_qs                 | -1.1673783 |
-| eval_qs_difference      | -1.79      |
-| eval_time_elapsed       | 7          |
-| total timesteps         | 20001      |
-----------------------------------------
-----------------------------------------
-| act_time                | 1          |
-| current_lr              | 0.0003     |
-| discount_q              | -1.24e-13  |
-| env_time                | 13         |
-| ep_rewmean              | -0.025     |
-| episodes                | 24         |
-| eplenmean               | 1e+03      |
-| fps                     | 182        |
-| mean 100 episode reward | -0         |
-| n_updates               | 0          |
-| qs_abs_difference       | 3.99       |
-| qs_difference           | -0.606     |
-| qs_mean                 | 0.17914401 |
-| time_elapsed            | 131        |
-| total timesteps         | 24000      |
-| train_time              | 0          |
-| update_time             | 88         |
-----------------------------------------
-----------------------------------------
-| act_time                | 2          |
-| current_lr              | 0.0003     |
-| discount_q              | 1.53e-12   |
-| env_time                | 15         |
-| ep_rewmean              | 3.69       |
-| episodes                | 28         |
-| eplenmean               | 1e+03      |
-| fps                     | 119        |
-| mean 100 episode reward | 3.7        |
-| n_updates               | 6200       |
-| q_grad_norm             | 4.4663577  |
-| qfs_loss                | 0.30605292 |
-| qs_abs_difference       | 21.2       |
-| qs_difference           | 21.2       |
-| qs_mean                 | 22.012922  |
-| time_elapsed            | 234        |
-| total timesteps         | 28000      |
-| train_time              | 63         |
-| update_time             | 123        |
-----------------------------------------
---------------------------------------
-| eval mean 100 episod... | 27.4     |
-| eval_abs_qs_difference  | 27.60782 |
-| eval_discount_q         | 26.1     |
-| eval_ep_rewmean         | 48.6     |
-| eval_eplenmean          | 1e+03    |
-| eval_qs                 | 29.88512 |
-| eval_qs_difference      | 27.6     |
-| eval_time_elapsed       | 10       |
-| total timesteps         | 30001    |
---------------------------------------
------------------------------------------
-| act_time                | 3           |
-| current_lr              | 0.0003      |
-| discount_q              | 1.94e-12    |
-| env_time                | 18          |
-| ep_rewmean              | 7.52        |
-| episodes                | 32          |
-| eplenmean               | 1e+03       |
-| fps                     | 85          |
-| mean 100 episode reward | 7.5         |
-| n_updates               | 14200       |
-| q_grad_norm             | 2.096443    |
-| qfs_loss                | 0.028457375 |
-| qs_abs_difference       | 26.6        |
-| qs_difference           | 26.6        |
-| qs_mean                 | 28.948265   |
-| time_elapsed            | 374         |
-| total timesteps         | 32000       |
-| train_time              | 144         |
-| update_time             | 166         |
------------------------------------------
------------------------------------------
-| act_time                | 5           |
-| current_lr              | 0.0003      |
-| discount_q              | 1.98e-12    |
-| env_time                | 21          |
-| ep_rewmean              | 10.1        |
-| episodes                | 36          |
-| eplenmean               | 1e+03       |
-| fps                     | 70          |
-| mean 100 episode reward | 10.1        |
-| n_updates               | 22200       |
-| q_grad_norm             | 2.1381047   |
-| qfs_loss                | 0.022689957 |
-| qs_abs_difference       | 27.6        |
-| qs_difference           | 27.6        |
-| qs_mean                 | 28.316187   |
-| time_elapsed            | 509         |
-| total timesteps         | 36000       |
-| train_time              | 226         |
-| update_time             | 214         |
------------------------------------------
------------------------------------------
-| act_time                | 7           |
-| current_lr              | 0.0003      |
-| discount_q              | 1.39e-12    |
-| env_time                | 24          |
-| ep_rewmean              | 12.5        |
-| episodes                | 40          |
-| eplenmean               | 1e+03       |
-| fps                     | 61          |
-| mean 100 episode reward | 12.5        |
-| n_updates               | 30200       |
-| q_grad_norm             | 1.9959499   |
-| qfs_loss                | 0.020795139 |
-| qs_abs_difference       | 24.5        |
-| qs_difference           | 24.5        |
-| qs_mean                 | 26.174639   |
-| time_elapsed            | 651         |
-| total timesteps         | 40000       |
-| train_time              | 308         |
-| update_time             | 269         |
+| eval mean 100 episod... | 24.6        |
+| eval_abs_qs_difference  | 2.3576918   |
+| eval_discount_q         | 8.9         |
+| eval_ep_rewmean         | 24.6        |
+| eval_eplenmean          | 1e+03       |
+| eval_qs                 | -0.55913687 |
+| eval_qs_difference      | -2.13       |
+| eval_time_elapsed       | 31          |
+| total timesteps         | 20001       |
 -----------------------------------------
 ---------------------------------------
-| eval mean 100 episod... | 29.9      |
-| eval_abs_qs_difference  | 19.09842  |
-| eval_discount_q         | 26        |
-| eval_ep_rewmean         | 38.9      |
-| eval_eplenmean          | 1e+03     |
-| eval_qs                 | 20.412176 |
-| eval_qs_difference      | 19.1      |
-| eval_time_elapsed       | 10        |
-| total timesteps         | 40001     |
+| act_time                | 3         |
+| current_lr              | 0.0003    |
+| discount_q              | -5.06e-14 |
+| env_time                | 37        |
+| ep_rewmean              | 0.877     |
+| episodes                | 24        |
+| eplenmean               | 1e+03     |
+| fps                     | 92        |
+| mean 100 episode reward | 0.9       |
+| n_updates               | 0         |
+| qs_abs_difference       | 2.84      |
+| qs_difference           | 0.938     |
+| qs_mean                 | 0.5496645 |
+| time_elapsed            | 260       |
+| total timesteps         | 24000     |
+| train_time              | 0         |
+| update_time             | 117       |
 ---------------------------------------
------------------------------------------
-| act_time                | 8           |
-| current_lr              | 0.0003      |
-| discount_q              | 1.98e-12    |
-| env_time                | 26          |
-| ep_rewmean              | 15          |
-| episodes                | 44          |
-| eplenmean               | 1e+03       |
-| fps                     | 54          |
-| mean 100 episode reward | 15          |
-| n_updates               | 38200       |
-| q_grad_norm             | 1.3373904   |
-| qfs_loss                | 0.012044329 |
-| qs_abs_difference       | 16.3        |
-| qs_difference           | 16.3        |
-| qs_mean                 | 18.297184   |
-| time_elapsed            | 811         |
-| total timesteps         | 44000       |
-| train_time              | 391         |
-| update_time             | 330         |
------------------------------------------
------------------------------------------
-| act_time                | 10          |
-| current_lr              | 0.0003      |
-| discount_q              | 2.23e-12    |
-| env_time                | 29          |
-| ep_rewmean              | 16.9        |
-| episodes                | 48          |
-| eplenmean               | 1e+03       |
-| fps                     | 50          |
-| mean 100 episode reward | 16.9        |
-| n_updates               | 46200       |
-| q_grad_norm             | 1.1751351   |
-| qfs_loss                | 0.010055134 |
-| qs_abs_difference       | 11.5        |
-| qs_difference           | 11.5        |
-| qs_mean                 | 12.7451     |
-| time_elapsed            | 952         |
-| total timesteps         | 48000       |
-| train_time              | 466         |
-| update_time             | 392         |
------------------------------------------
