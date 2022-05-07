@@ -50,7 +50,7 @@ class ScoreInspector:
             self.max_state = np.array([self.state_max for i in range(self.state_dim)] + [self.action_max for i in range(self.action_dim)])
 
         self.min_avg_proceed = 0
-        self.max_avg_proceed = 50
+        self.max_avg_proceed = 10
 
         #self.scores = scores
         self.score_avg = 0
@@ -189,7 +189,7 @@ class Abstracter:
         score, time = self.inspector.inquery(pattern)
         
         if score != None:
-            if  time > 0:
+            if  time > 1:
                 delta = (score - self.inspector.score_avg) * self.decay
                 rewards[0] += delta
                 #self.inspector.states_info[pattern]['score'] = self.inspector.states_info[pattern]['score'] * 0.99
@@ -199,7 +199,7 @@ class Abstracter:
 
 
     def reward_shaping(self, state_list, reward_list):
-        
+
         shaping_reward_list = copy.deepcopy(reward_list)
 
         for i in range(len(state_list) - self.order):

@@ -100,7 +100,6 @@ class EpisodicMemoryRCS(EpisodicMemory):
                                              # np.min(one_step_q,axis=1,keepdims=True))
                                              one_step_q)
     def update_sequence_with_qs(self, sequence):
-        # print(sequence)
         next_id = -1
         Rtd = 0
 
