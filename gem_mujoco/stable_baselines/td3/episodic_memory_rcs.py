@@ -8,19 +8,29 @@ class EpisodicMemoryRCS(EpisodicMemory):
     def __init__(self, buffer_size, state_dim, action_shape, obs_space, q_func, repr_func, obs_ph, action_ph, sess,
                  gamma=0.99,
                  alpha=0.6,max_step=1000,
-                 order = order,
-                 grid_num = grid_num, 
-                 decay  = decay, 
-                 state_len = state_len,
-                 state_min = state_min, 
-                 state_max = state_max,
-                 action_dim = action_dim,
-                 action_min = action_min,
-                 action_max = action_max, 
-                 mode = mode):
-        super(EpisodicMemoryTBP, self).__init__(buffer_size, state_dim, action_shape, obs_space, q_func, repr_func,
+                 order = 1,
+                 grid_num = 10, 
+                 decay = 0.2, 
+                 state_len = 8,
+                 state_min = -6, 
+                 state_max = 6,
+                 action_dim = 2,
+                 action_min = -1,
+                 action_max = -1, 
+                 mode = 'state_action'):
+        self.order = order
+        self.grid_num = grid_num
+        self.decay = decay
+        self.state_len = state_len
+        self.state_min = state_min
+        self.state_max = state_max
+        self.action_dim = action_dim
+        self.action_min = action_min
+        self.action_max = action_max
+        self.mode = mode
+        super(EpisodicMemoryRCS, self).__init__(buffer_size, state_dim, action_shape, obs_space, q_func, repr_func,
                                                 obs_ph, action_ph, sess,
-                                                gamma, alpha,max_step,order, grid_num, decay, state_len, state_min, state_max, action_dim, action_min,action_max, mode)
+                                                gamma, alpha,max_step)
         del self._q_values
         self._q_values = -np.inf * np.ones((buffer_size + 1, 2))
 
@@ -99,7 +109,7 @@ class EpisodicMemoryRCS(EpisodicMemory):
         r_list = []
         new_sequence = []
         for obs, a, z, q_t, r, truly_done, done in sequence:
-            policy.abstracter.append(list(obs) + list(a), r, done)
+            self.abstracter.append(list(obs) + list(a), r, done)
             if self.abstracter.inspector.mode == 'state':
                 state_action_list.append(list(obs))
             elif self.abstracter.inspector.mode == 'state_action':
@@ -107,14 +117,16 @@ class EpisodicMemoryRCS(EpisodicMemory):
             reward_list.append(r)
 
             if done:
-                reward_list = self.abstracter.reward_shaping(np.array(state_action_list), np.array(reward_list), step, total_step)
+                reward_list = self.abstracter.reward_shaping(np.array(state_action_list), np.array(reward_list))
                 r_list = r_list + reward_list.tolist()
                 state_action_list = []
                 reward_list = []
                 self.abstracter.inspector.sync_scores()
 
         for i in range(len(sequence)):
-            sequence[i][4] = r_list[i]
+            item_i = list(sequence[i])
+            item_i[4] = r_list[i]
+            sequence[i] = tuple(item_i)
 
         for obs, a, z, q_t, r, truly_done, done in reversed(sequence):
             # print(np.mean(z))

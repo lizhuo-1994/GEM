@@ -6,7 +6,7 @@ from stable_baselines.td3.episodic_memory import EpisodicMemory
 from stable_baselines.td3.episodic_memory_tbp import EpisodicMemoryTBP
 from stable_baselines.td3.td3_mem_backprop import TD3MemBackProp
 
-from stable_baselines.td3.episodic_memory_tbp import EpisodicMemoryRCS
+from stable_baselines.td3.episodic_memory_rcs import EpisodicMemoryRCS
 
 
 class TD3MemRCS(TD3MemBackProp):
@@ -78,6 +78,12 @@ class TD3MemRCS(TD3MemBackProp):
         self.num_q = num_q  # or 2
         self.double_type = double_type
         self.clip_norm = 1
+        self.order = order
+        self.grid_num = grid_num
+        self.decay = decay
+        self.state_min = state_min
+        self.state_max = state_max
+        self.mode = mode
         super(TD3MemRCS, self).__init__(policy, env, eval_env, gamma, learning_rate,
                                         buffer_size,
                                         learning_starts, train_freq, gradient_steps, batch_size,
@@ -86,8 +92,7 @@ class TD3MemRCS(TD3MemBackProp):
                                         target_policy_noise, target_noise_clip, start_policy_learning,
                                         random_exploration, verbose, tensorboard_log,
                                         _init_setup_model, policy_kwargs,
-                                        full_tensorboard_log, seed, n_cpu_tf_sess,
-                                        order, grid_num, decay, state_min, state_max, mode)
+                                        full_tensorboard_log, seed, n_cpu_tf_sess)
 
     def setup_model(self):
         # print("setup model ",self.observation_space.shape)
@@ -267,10 +272,10 @@ class TD3MemRCS(TD3MemBackProp):
 
                 self.summary = tf.summary.merge_all()
 
-                state_len = env.observation_space.shape[0]
-                action_dim = env.action_space.shape[0]
-                action_min = np.min(env.action_space.low)
-                action_max = np.max(env.action_space.high)
+                state_len = self.env.observation_space.shape[0]
+                action_dim = self.env.action_space.shape[0]
+                action_min = np.min(self.env.action_space.low)
+                action_max = np.max(self.env.action_space.high)
 
                 self.memory = EpisodicMemoryRCS(self.buffer_size, state_dim=1,
                                                 obs_space=self.observation_space,
@@ -278,11 +283,11 @@ class TD3MemRCS(TD3MemBackProp):
                                                 q_func=self.qfs_target, repr_func=None,
                                                 obs_ph=self.processed_next_obs_ph,
                                                 action_ph=self.actions_ph, sess=self.sess, gamma=self.gamma,
-                                                max_step=self.max_step
+                                                max_step=self.max_step,
                                                 order = self.order, 
                                                 grid_num = self.grid_num, 
                                                 decay  = self.decay, 
-                                                state_len = state_len
+                                                state_len = state_len,
                                                 state_min = self.state_min, 
                                                 state_max = self.state_max, 
                                                 action_dim = action_dim,

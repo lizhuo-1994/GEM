@@ -1,0 +1,1 @@
+Logging to ./log_gem/mujoco/rcs_1/swimmer_rcs_0

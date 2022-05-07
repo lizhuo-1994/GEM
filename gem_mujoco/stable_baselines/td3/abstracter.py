@@ -85,7 +85,7 @@ class ScoreInspector:
             self.states_info.update(new_states_info)
             self.score_avg = np.mean([self.states_info[abs_state]['score'] for abs_state in self.states_info.keys()])
             
-            '''
+            
             print('############################################################')
             #print('Abstract states :\t', self.states_info)
             print('Abstract states number :\t', len(self.states_info.keys()))
@@ -93,7 +93,7 @@ class ScoreInspector:
             print('Queue size :\t',self.s_token.qsize())
             print('min and max proceed', self.min_avg_proceed, self.max_avg_proceed)
             print('############################################################')
-            '''
+            
             
     
     def start_pattern_abstract(self, con_states, rewards):
@@ -179,7 +179,7 @@ class Abstracter:
         self.con_reward = []
         self.con_dones  = []
     
-    def handle_pattern(self,con_states,rewards,step, total_step):
+    def handle_pattern(self,con_states,rewards):
         
         abs_pattern = self.inspector.discretize_states(con_states)
         
@@ -198,7 +198,7 @@ class Abstracter:
 
 
 
-    def reward_shaping(self, state_list, reward_list, step, total_step):
+    def reward_shaping(self, state_list, reward_list):
         
         shaping_reward_list = copy.deepcopy(reward_list)
 
@@ -207,7 +207,7 @@ class Abstracter:
             target_states = state_list[i:i+self.order]
             target_rewards = reward_list[i:i+self.order]
 
-            shaped_reward = self.handle_pattern(target_states, target_rewards, step, total_step)
+            shaped_reward = self.handle_pattern(target_states, target_rewards)
             shaping_reward_list[i] = shaped_reward
         
         shaping_reward_list = np.array(shaping_reward_list)
