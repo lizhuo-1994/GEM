@@ -1,0 +1,1 @@
+{"env_type": "mujoco", "env_id": "Swimmer-v3", "agent": "RCS", "layer_norm": false, "evaluation": true, "seed": 2, "comment": "swimmer_rcs_2", "gamma": 0.99, "num_timesteps": 400001, "max_steps": 1000, "delay_step": 0, "order": 1, "grid_num": 10, "decay": 0.1, "state_min": -10.0, "state_max": 10.0, "mode": "state_action"}
